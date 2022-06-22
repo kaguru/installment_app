@@ -46,6 +46,6 @@ public class LoanServiceImpl  implements LoanService{
                 .filter(
                         Objects::nonNull
                 )
-                .reduce(new BigDecimal(0), (x, y) -> x.add(y));
+                .reduce(new BigDecimal(0), BigDecimal::add);
     }
 }
